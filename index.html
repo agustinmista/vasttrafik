@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Morning trip</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+		<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+          <!-- Carousel -->
+					<div id="trips-carousel" class="featured-carousel owl-carousel">
+						<div id="card-25"></div>
+						<div id="card-16"></div>
+						<div id="card-58"></div>
+						<div id="card-31"></div>
+						<div id="card-99"></div>
+						<div id="card-X1"></div>
+					</div>
+          <!-- Carousel -->
+				</div>
+			</div>
+		</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/trip.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+	    $(document).ready(function() {
+        var vAPI = new VasttrafikAPI();
+        new CreateTripCard(vAPI, "#card-25", "25", 9021014012120000, "B", 9021014005600001, "B");
+        new CreateTripCard(vAPI, "#card-16", "16", 9022014005600000, "C", 9022014004490003, "C");
+        new CreateTripCard(vAPI, "#card-58", "58", 9022014004945002, "B", 9022014004490003, "C");
+        new CreateTripCard(vAPI, "#card-31", "31", 9022014003180001, "A1", 9022014004490004, "D");
+        new CreateTripCard(vAPI, "#card-99", "99", 9022014003180001, "A5", 9022014004490004, "D");
+        new CreateTripCard(vAPI, "#card-X1", "X1", 9022014004945001, "A", 9022014004490003, "C");
+      });
+    </script>
+  </body>
+</html>
